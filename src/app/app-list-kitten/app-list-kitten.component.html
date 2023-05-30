@@ -1,16 +1,23 @@
 <h2>Liste des chatons disponibles</h2>
 
 <div
+  class="kitten-container"
   *ngFor="let kitten of kittens"
   (mouseover)="showKittenDetails(kitten)"
   (mouseleave)="hideKittenDetails()"
 >
-  <img [src]="kitten.photo" alt="Photo de {{ kitten.name }}" />
+  <img
+    class="kitten-photo"
+    [src]="kitten.photo"
+    alt="Photo de {{ kitten.name }}"
+  />
   <br />
-  <button (click)="adoptKitten(kitten)">Adopter {{ kitten.name }}</button>
+  <button class="adopt-button" (click)="adoptKitten(kitten)">
+    Adopter {{ kitten.name }}
+  </button>
   <br />
   <br />
-  <div *ngIf="selectedKitten === kitten">
+  <div class="kitten-details" *ngIf="selectedKitten === kitten">
     <p>Nom: {{ kitten.name }}</p>
     <p>Race: {{ kitten.breed }}</p>
     <p>Date de naissance: {{ kitten.birthdate }}</p>

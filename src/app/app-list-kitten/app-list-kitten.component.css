@@ -1,0 +1,49 @@
+/* AppListKittenComponent */
+h2 {
+  color: #333;
+}
+
+div.kitten-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+div.kitten-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.kitten-details {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.kitten-details p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.kitten-details p:first-child {
+  font-weight: bold;
+}
+
+.kitten-details p:not(:first-child) {
+  color: #666;
+}
+
+button.adopt-button {
+  padding: 8px 16px;
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.adopt-button:hover {
+  background-color: #c9302c;
+}
